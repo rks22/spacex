@@ -47,7 +47,9 @@ export const Launches = ({ launches = [], requestLaunches }) => {
           return (
             <Card
               key={launch.num}
-              imageSrc={launch.images.small}
+              imageSrc={launch.images.src}
+              imageSrcSet = {launch.images.srcset}
+              sizes = {launch.images.sizes}
               className={styles.launchCard}
             >
               <Details launch={launch} />

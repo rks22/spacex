@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import styles from "./badge.module.css";
 
 export const Badge = ({ value, type = "primary", className }) => {
@@ -10,4 +11,10 @@ export const Badge = ({ value, type = "primary", className }) => {
       {value}
     </span>
   );
+};
+
+Badge.propTypes = {
+  value: PropTypes.any,
+  type: PropTypes.oneOf(['primary', 'secondary']),
+  className: PropTypes.string
 };

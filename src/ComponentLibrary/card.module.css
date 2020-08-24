@@ -6,12 +6,10 @@
 }
 .imgContainer{
     background:#EFEFEF;
+    min-height: 50px;
 }
 
-.imgContainer img{
-    width : 100%;
-    object-fit: cover;
-}
+
 
 .detailsContainer{
     Padding-top: 1rem;

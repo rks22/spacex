@@ -4,10 +4,10 @@ export const reqParser = ({
   land_success = null,
 } = {}) => {
   return {
-    limit:100,
+    limit: 100,
     ...(launch_year && { launch_year }),
-    ...(launch_success && { launch_success}),
-    ...(land_success && { land_success}),
+    ...(launch_success && { launch_success }),
+    ...(land_success && { land_success }),
   };
 };
 
@@ -19,26 +19,29 @@ export const _parseMissionIds = (launch) => {
   return mission_id.join(",");
 };
 
-export const _parseLanding = launch => {
-    if(!launch){
-        return null;
-    }
+export const _parseLanding = (launch) => {
+  if (!launch) {
+    return null;
+  }
   const {
     rocket: { first_stage: { cores: [{ land_success }] } = {} } = {},
   } = launch;
   return land_success;
 };
 
-export const _parseImages = launch => {
-    if(!launch){
-        return null;
-    }
-    const {links : {mission_patch,mission_patch_small}} = launch;
-    return {
-        small:mission_patch_small,
-        large:mission_patch
-    }
-}
+export const _parseImages = (launch) => {
+  if (!launch) {
+    return null;
+  }
+  const {
+    links: { mission_patch, mission_patch_small },
+  } = launch;
+  return {
+    src: mission_patch,
+    srcset: `${mission_patch} 1024w , ${mission_patch_small} 256w`,
+    sizes: `(max-width: 700px) 100vw,(max-width: 1024px) 33vw,  (min-width) 1024px 20vw`,
+  };
+};
 
 export const responseParser = (response = []) => {
   return response.map((launch) => ({

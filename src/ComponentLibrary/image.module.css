@@ -3,6 +3,7 @@
 img.genericImage{
     width: 100%;
     display: block;
+    height:auto;
 }
 img.cover{
     object-fit: cover;

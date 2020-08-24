@@ -5,3 +5,10 @@ export const spacex_launches = (state = {value :null},action) => {
     }
     return state;
 }
+
+export const spacex_launches_loading = (state = {value :false},action) => {
+    if(action.type === 'SPACEX/LAUNCHES_LOADING'){
+        return {...{value:action.data}}
+    }
+    return state;
+}

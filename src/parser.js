@@ -35,8 +35,8 @@ export const _parseImages = launch => {
     }
     const {links : {mission_patch,mission_patch_small}} = launch;
     return {
-        small:mission_patch_small,
-        large:mission_patch
+        src: mission_patch,
+        srcset: `${mission_patch} 1024w ${mission_patch_small} 256w`
     }
 }
 
