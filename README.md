@@ -8,7 +8,17 @@ This is an application developed for SpaceX, integrated with API to display laun
 
 [View Spacex Launches](https://spacex-p.netlify.app/)
 
+### Functional improvements
 
+
+Add a loader while users wait for Launches results
+Fetch data in batches(limit 10) and fetch more  as user scrolls (react-intersection-observer)
+
+### Techincal improvements
+
+server side rendering is still not in place due to issues with css loader and generated classnames working on server side
+Add more test cases
+switch to typescipt for strong static type check
 
 ### COMMANDS
 yarn build  - for production build
