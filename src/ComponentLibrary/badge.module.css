@@ -1,0 +1,17 @@
+
+
+.badge{
+    display: inline-flex;
+    padding:0 0.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+.badge.primary {
+    background: #c5e09b;
+}
+
+.badge.secondary {
+    background :  #7db513;
+    ;
+}

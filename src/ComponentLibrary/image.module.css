@@ -1,0 +1,13 @@
+
+
+img.genericImage{
+    width: 100%;
+    display: block;
+}
+img.cover{
+    object-fit: cover;
+}
+img.contain{
+    object-fit:contain;
+}
+

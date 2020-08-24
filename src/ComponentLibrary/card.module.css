@@ -1,0 +1,18 @@
+
+
+.cardContainer{
+    background:white;
+    padding: 1rem;
+}
+.imgContainer{
+    background:#EFEFEF;
+}
+
+.imgContainer img{
+    width : 100%;
+    object-fit: cover;
+}
+
+.detailsContainer{
+    Padding-top: 1rem;
+}

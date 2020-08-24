@@ -1,0 +1,36 @@
+
+
+
+.launchCard{
+    box-sizing: border-box;
+    margin-top:  1rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 4px;
+    flex-basis: 100%;
+}
+
+.details .title{
+    display: inline-block;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+    color:  #2e6293;
+}
+
+.desc .descTitle {
+    font-weight: bold;
+}
+
+@media (min-width: 1024px ){
+    .launchCard{
+        flex-basis: calc(25% - 1rem);  
+        margin: 0 1rem 1rem 0;
+  }    
+}
+
+@media (min-width: 701px ) and (max-width: 1023px){
+    .launchCard{
+        flex-basis: calc(50% - 1rem);
+        margin: 0 1rem 1rem 0;
+    }
+}
