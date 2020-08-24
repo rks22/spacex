@@ -4,6 +4,11 @@
 
 This is an application developed for SpaceX, integrated with API to display launches based on year and other parameters.
 
+### Deployed on Netlify:
+
+[View Spacex Launches](https://spacex-p.netlify.app/)
+
+
 
 ### COMMANDS
 yarn build  - for production build
