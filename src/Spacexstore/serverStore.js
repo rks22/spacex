@@ -1,3 +1,4 @@
+
 import { createStore, applyMiddleware } from "redux";
 import { createEpicMiddleware } from "redux-observable";
 import { rootEpic } from "./epics";
@@ -6,14 +7,10 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 const epicMiddleware = createEpicMiddleware();
 
-let preloadedState = null;
-if( window !== undefined ){
-  preloadedState =  window.__PRELOADED_STATE__;
-}
 export default function configureStore(initialState) {
   const store = createStore(
     rootReducer,
-    initialState ? initialState : preloadedState,
+    initialState,
     composeWithDevTools(applyMiddleware(epicMiddleware))
   );
 

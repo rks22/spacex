@@ -1,7 +1,13 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+
 const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   target: 'node',
+node: {
+  __dirname: false,
+  __filename: false,
+},
   entry: {
     "page": "./src/index.js",
    },
@@ -9,15 +15,14 @@ module.exports = {
     path: __dirname,
     filename: "bundle.js",
    },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css',
-    }),
-  ],
   resolve : {
     extensions: ['.js', '.jsx', '.css']
   },
+  plugins:[
+    new MiniCssExtractPlugin({
+      filename:  "[name].css"
+    })
+  ],
   module: {
     rules: [
       {
@@ -26,25 +31,26 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env','@babel/preset-react'],
-              plugins: ["css-modules-transform"]
-          
+            presets: ['@babel/preset-env','@babel/preset-react']
           }
         } 
      },
       {
-        test: /\.css?$/,
+        test: /\.(module.css|css)?$/,
         include: [
             path.resolve(__dirname, './src'),
           ],
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
+         MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
-              modules : true
+              modules: {
+                auto: true,
+                localIdentName: '[name]__[local]___[hash:base64:5]',
+                exportOnlyLocals: false
+            },
+              importLoaders: 1
             }
           },
         ],

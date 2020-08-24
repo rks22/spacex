@@ -1,34 +1,32 @@
 import express from "express";
-import path from "path";
+import path, { dirname } from "path";
 import React from "react";
 import {Page} from "../Page";
 import ReactDOMServer from 'react-dom/server';
+import fs from 'fs';
 
 const app = express();
 const PORT = process.env.PORT || 3006;
 app.get('/', (req, res) => {
-    const page = ReactDOMServer.renderToString(<Page />);
-      return res.send(
-      `
-        <!DOCTYPE html>
-        <html>
-          <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <link rel="stylesheet" href="/page.css">
-          </head>
-          <body>
-            <div id="root">${page}</div>
-        <script src="/bundle.js"></script>
-          </body>
-        </html>
-        `
-      );
-    });
+  const page = ReactDOMServer.renderToString(<Page />);
+
+  const indexFile = path.resolve(__dirname,'..','..','build','index.html');
+  fs.readFile(indexFile, 'utf8', (err, data) => {
+    if (err) {
+      console.error('Something went wrong:', err);
+      return res.status(500).send('Oops, better luck next time!');
+    }
+
+    return res.send(
+      data.replace('<div id="root"></div>', `<div id="root">${page}</div>`)
+    );
+  });
+});
+
+
   
   
-app.use('/', express.static(path.join(__dirname,'..','..')));
+app.use('/static', express.static(path.join(__dirname,'..','..','build','static')));
   
   app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);

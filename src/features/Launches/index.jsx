@@ -37,8 +37,8 @@ export const Details = ({ launch }) => {
 
 export const Launches = ({ launches = [], requestLaunches }) => {
   useEffect(() => {
-    requestLaunches();
-  }, [requestLaunches]);
+    !launches && requestLaunches();
+  }, [launches,requestLaunches]);
   return (
     <>
       {launches &&
