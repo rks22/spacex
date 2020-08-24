@@ -59,6 +59,8 @@ Smart API request control with rxjs observables.
 
 ### Functional improvements
 
+Lazy load images 
+
 
 Add a loader while users wait for Launches results
 
