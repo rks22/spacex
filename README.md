@@ -7,20 +7,34 @@ This is an application developed for SpaceX, integrated with API to display laun
 
 ### COMMANDS
 yarn build  - for production build
+
+
 yarn start - for development (PORT - 3000)
 
 
 ### TECH STACK
 REACT
+
+
 REDUX
+
+
 REDUX OBSERVABLE
+
+
 CSS MODULES 
 
 TESTING 
+
+
 JEST
 
 TYPE CHECK
+
+
 REACT PROPTYPES
+
+
 FLOW
 
 
