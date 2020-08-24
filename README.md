@@ -48,7 +48,7 @@ FLOW
 
 
 
-Built on React with strong support from redux and redux observable for easy maintaince of current launches status at any instant.
+Built on React with strong support from redux and redux observable to achieve  maintainability
 
 Self explanatory action names available in redux dev tools
 
