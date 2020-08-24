@@ -9,6 +9,7 @@ const epicMiddleware = createEpicMiddleware();
 let preloadedState = null;
 if( window !== undefined ){
   preloadedState =  window.__PRELOADED_STATE__;
+  delete window.__PRELOADED_STATE__;
 }
 export default function configureStore(initialState) {
   const store = createStore(

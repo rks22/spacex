@@ -21,10 +21,9 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "flow": "flow",
     "server": "node src/server/start server",
-    "build": "react-scripts build",
+    "build": "run-s webpack:build server",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "webpack:build": "webpack --config webpack.config.js",
     "build:server": "run-s webpack:build server"
   },
   "eslintConfig": {
