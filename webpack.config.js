@@ -32,7 +32,7 @@ node: {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env','@babel/preset-react']
-          }
+          },
         } 
      },
       {
@@ -47,7 +47,7 @@ node: {
             options: {
               modules: {
                 auto: true,
-                localIdentName: '[name]__[local]___[hash:base64:5]',
+                localIdentName: '[name]__[local]',
                 exportOnlyLocals: false
             },
               importLoaders: 1
