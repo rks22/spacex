@@ -1,8 +1,7 @@
 import express from "express";
-import path, { dirname } from "path";
+import path from "path";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
-import fs from "fs";
 import configureStore from "../Spacexstore/serverStore";
 import { Provider } from "react-redux";
 import { View } from "../Pages/LaunchesView";
