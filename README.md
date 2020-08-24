@@ -12,6 +12,10 @@ yarn build  - for production build
 yarn start - for development (PORT - 3000)
 
 
+
+### Scaffolded from create-react-app
+
+
 ### TECH STACK
 REACT
 
@@ -38,7 +42,6 @@ REACT PROPTYPES
 FLOW
 
 
-Scaffolded from create-react-app,
 
 Built on React with strong support from redux and redux observable for easy maintaince of current launches status at any instant.
 
