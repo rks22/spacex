@@ -50,7 +50,7 @@ Smart API request control with rxjs observables.
 
 
 ### server side rendering :
-Currently server side rendering has some issues rendering generated class names from css modules. Still working on it.
+Currently server side rendering has some issues rendering with generated class names from css modules. Still working on it.
 
 
 
