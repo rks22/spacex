@@ -8,26 +8,7 @@ This is an application developed for SpaceX, integrated with API to display laun
 
 [View Spacex Launches](https://spacex-p.netlify.app/)
 
-### Functional improvements
 
-
-Add a loader while users wait for Launches results
-
-
-Fetch data in batches(limit 10) and fetch more  as user scrolls (react-intersection-observer)
-
-### Techincal improvements
-
-server side rendering is still not in place due to issues with css loader and generated classnames working on server side
-
-
-Add more test cases
-
-
-switch to typescipt for strong static type check
-
-
-Code splitting on server side.
 
 ### COMMANDS
 yarn build  - for production build
@@ -74,6 +55,28 @@ Self explanatory action names available in redux dev tools
 React Component Library created with pure and simplest components with high re-usability and type checked.
 
 Smart API request control with rxjs observables.
+
+
+### Functional improvements
+
+
+Add a loader while users wait for Launches results
+
+
+Fetch data in batches(limit 10) and fetch more  as user scrolls (react-intersection-observer)
+
+### Techincal improvements
+
+server side rendering is still not in place due to issues with css loader and generated classnames working on server side
+
+
+Add more test cases
+
+
+switch to typescipt for strong static type check
+
+
+Code splitting on server side.
 
 
 ### server side rendering :
