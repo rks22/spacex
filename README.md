@@ -85,4 +85,7 @@ Code splitting on server side.
 Currently server side rendering has some issues rendering with generated class names from css modules. Still working on it.
 
 
+![Bundle Analyzer](report.png "Bundle Analyzer")
+
+
 
