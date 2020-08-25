@@ -4,7 +4,7 @@
 
 This is an application developed for SpaceX, integrated with API to display launches based on year and other parameters.
 
-### Deployed on Netlify:
+### Deployed on Netlify:Deployed as a static site.
 
 [View Spacex Launches](https://spacex-p.netlify.app/)
 
@@ -15,6 +15,8 @@ yarn build  - for production build
 
 
 yarn start - for development (PORT - 3000)
+
+yarn build:server for server side rendering
 
 
 
@@ -69,8 +71,6 @@ Fetch data in batches(limit 10) and fetch more  as user scrolls (react-intersect
 
 ### Techincal improvements
 
-server side rendering is still not in place due to issues with css loader and generated classnames working on server side
-
 
 Add more test cases
 
@@ -81,8 +81,6 @@ switch to typescipt for strong static type check
 Code splitting on server side.
 
 
-### server side rendering :
-Currently server side rendering has some issues rendering with generated class names from css modules. Still working on it.
 
 
 ![Bundle Analyzer](report.png "Bundle Analyzer")
