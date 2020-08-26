@@ -17,11 +17,11 @@
     "source-map-explorer": "^2.5.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node src/server/start server",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "flow": "flow",
     "server": "node src/server/start server",
-    "build": "react-scripts build",
+    "build": "webpack --config webpack.config.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "webpack:build": "webpack --config webpack.config.js",
