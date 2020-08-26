@@ -55,7 +55,7 @@ var config = {
   },
 };
 
-module.exports = (env, argv) => {
+module.exports = (env = {}, argv = {}) => {
   if (argv.mode === "development" || env.watch) {
     config = {
       ...config,
