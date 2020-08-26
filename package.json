@@ -17,7 +17,7 @@
     "source-map-explorer": "^2.5.0"
   },
   "scripts": {
-    "start": "node src/server/start server",
+    "start": "run-s webpack:build server",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "flow": "flow",
     "server": "node src/server/start server",
